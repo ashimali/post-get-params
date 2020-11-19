@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>POST forms v GET forms - local v deployed</title>
+  </head>
+  <body>
+    <header><h1>POST forms v GET forms - local v deployed</h1></header>
+    <main>
+      <section>
+        <form action="/event">
+          <label for="cars">Choose a car:</label>
+          <select name="cars" id="cars" multiple required>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+          <br />
+          <label for="form-method">Form method</label>
+          <input
+            id="form-method"
+            name="form-method"
+            type="text"
+            value="GET"
+            readonly
+          />
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+      <section>
+        <form action="/event" method="POST">
+          <label for="cars">Choose a car:</label>
+          <select name="cars" id="cars" multiple required>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+          <br />
+          <label for="form-method">Form method</label>
+          <input
+            id="form-method"
+            name="form-method"
+            type="text"
+            value="POST"
+            readonly
+          />
+          <br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
